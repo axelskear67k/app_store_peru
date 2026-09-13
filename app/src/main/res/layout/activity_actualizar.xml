@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F6F8"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/txtTituloActualizar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:text="ACTUALIZAR PRODUCTO"
+            android:textColor="#17202A"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtSubtituloActualizar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:text="Busca un producto y modifica sus datos"
+            android:textColor="#7B7D7D"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtTituloActualizar" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardBuscarActualizar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="7dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtSubtituloActualizar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="22dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Buscar producto"
+                    android:textColor="#2C3E50"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edtIdActualizar"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="15dp"
+                    android:backgroundTint="#5D6D7E"
+                    android:hint="ID del producto"
+                    android:inputType="number"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btnBuscarActualizar"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="18dp"
+                    android:text="Buscar Producto"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardDatosActualizar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="30dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="6dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardBuscarActualizar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="22dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Datos del producto"
+                    android:textColor="#2C3E50"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Edita los campos que deseas actualizar"
+                    android:textColor="#7B7D7D"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/edtNombreActualizar"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="18dp"
+                    android:backgroundTint="#5D6D7E"
+                    android:hint="Nombre"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/edtCategoriaActualizar"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="12dp"
+                    android:backgroundTint="#5D6D7E"
+                    android:hint="Categoría"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/edtDescripcionActualizar"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="12dp"
+                    android:backgroundTint="#5D6D7E"
+                    android:gravity="top"
+                    android:hint="Descripción"
+                    android:padding="12dp"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/edtGarantiaActualizar"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="12dp"
+                    android:backgroundTint="#5D6D7E"
+                    android:hint="Garantía en meses"
+                    android:inputType="number"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/edtPrecioActualizar"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="12dp"
+                    android:backgroundTint="#5D6D7E"
+                    android:hint="Precio"
+                    android:inputType="numberDecimal"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/edtStockActualizar"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="12dp"
+                    android:backgroundTint="#5D6D7E"
+                    android:hint="Stock"
+                    android:inputType="number"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btnActualizarProducto"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:layout_marginTop="25dp"
+                    android:text="Actualizar Producto"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
